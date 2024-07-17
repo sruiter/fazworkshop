@@ -1,0 +1,1 @@
+killall logtool64int

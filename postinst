@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#while ! ping -W 1 -c 1 8.8.8.8; do sleep 5; done
+
+## Make script executable 
+#chmod +x /fortipoc/001_logreplay.sh
+#chmod +x /fortipoc/logtool/logtool64int
+#chmod +x /fortipoc/logtool/sendlogFGT.sh
+#chmod +x /fortipoc/logtool/sendlogSDWAN.sh
+#chmod +x /fortipoc/logtool/stoplog.sh
+
+## Move modified .bashrc file
+cp /fortipoc/.bashrc /root/.bashrc
+
+## Install packeges and dependencies 
+#dpkg -i /fortipoc/packages/*.deb
+
+#while ! ping -W 1 -c 1 10.200.0.254; do sleep 5; done
+python2 /fortipoc/device-sim-random2.py > /fortipoc/device-sim-random2.txt &
+#/fortipoc/001_logreplay.sh
+
+echo "POST INSTALL execution" 
+touch /postinstall_done
