@@ -3,7 +3,8 @@
 #read fazip
 #read -p "please input FortiAnalyzer IP:" -e -i 172.0.0.6 fazip
 read -p "please input FortiGate S/N(Default FGT1KC0000000001):" -e -i FGVM01TM23001638 fgtsn
-fazip=172.16.1.2
+#fazip172.16.1.2
+fazip=192.168.1.254
 # fgtsn=FGVM01TM23001638
 speed=20
 
